@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header-container{
+    background-image: url(Picfor2/FooterBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 99px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Baskervville';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo h3{
+    margin:0 10px;
+}
+
+.logo img{
+    width: 80%;
+     
+}
+
+/* Navigator */
+.navigator {
+    margin-right: 20px;
+
+}
+
+ul{
+    display:flex;
+    list-style: none;
+}
+a {
+    position: relative;
+    margin: 0 20px;
+    text-decoration: none;
+    font-family: 'Baskervville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing:0.5px;
+    color: #FFFFFF;
+}
+
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #f7890b;
+    height: 1px;
+    width:0;
+    left:0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover{
+    color: #FFFF;
+}
+a:hover:after{
+    width: 100%;
+}
+
+/* Hamburger Menu */
+
+.menu-toogle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.menu-toogle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+
+    background-color: #f7890b;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.menu-toogle input{
+    position: absolute;
+    width: 48px;
+    height: 30px;
+    right: 10px;
+    top: 25px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+/* Hamburger Menu Animation */
+.menu-toogle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toogle span:nth-child(3){
+    transform-origin: 0 0;
+}
+.menu-toogle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked ~ span:nth-child(2){
+    background-color: #865A05;
+    transform:rotate(45deg) translate(-1px, -1px);
+}
+.menu-toogle input:checked ~ span:nth-child(4){
+    background-color: #865A05;
+    transform:rotate(-45deg) translate(0, 0);
+}
+.menu-toogle input:checked ~ span:nth-child(3){
+    transform:scale(0);
+}
+
+/* Body */
+body{
+    overflow-x: hidden;
+}
+
+.body-container {
+    height: 1000px;
+
+    background: url(Picfor2/Bodybg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.iklan{
+    display: flex;
+    justify-content:center;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.gambar{
+    margin: 30px 0;
+    margin-left: 50px;
+}
+.gambar2{
+    margin: 30px; 
+}
+
+.jenis-gitar{
+    display: flex;
+    justify-content:space-between;
+    margin-left: 50px;
+    margin-right: 30px;
+
+    text-align: center;
+}
+
+.jenis-gitar img{
+    transition:300ms;
+}
+
+.jenis-gitar img:hover{
+    transform: translateY(-8px);
+}
+.jenis-gitar p{
+    font-family: 'Baskervville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+}
+
+.brand{
+    margin-left: 50px;
+    
+}
+
+.brand p{
+    margin-top: 60px;
+    font-family: 'Baskervville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+.brand img{
+    margin-right: 18px;
+}
+
+/* Footer */
+.footer-container {
+    height: 61px;
+    background: url(Picfor2/FooterBg.svg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footer-container p {
+    font-family: 'Baskervville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    
+    color: #FFFFFF;
+}
+
+.float img{
+    margin: 0 -20px;
+}
+@media screen and (min-width: 1441px){
+    .jenis-gitar{
+        display: flex;
+        margin-left: 50px;
+        margin-right: 10px;
+        justify-content:center;
+    }
+    
+    .jenis-gitar img{
+        margin: 0 20px;
+        transition:300ms;
+    }
+}
+@media screen and (max-width: 1440px){
+    .jenis-gitar{
+        display: flex;
+        margin-left: 50px;
+        margin-right: 10px;
+        justify-content:center;
+    }
+    
+    .jenis-gitar img{
+        margin: 0 20px;
+        transition:300ms;
+    }
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width:768px){
+    /* responsive header */
+    .menu-toogle{
+        display:flex;
+    }
+    nav ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #dba66a;
+        align-items: center;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.sl{
+        transform: translateX(0);
+        opacity:1;
+    }
+
+    .header-container{
+        height: 70px;
+    }
+
+    /* responsive Body */
+    .body-container {
+        height: 2800px;
+    }
+    .iklan{
+        display: inline;
+        justify-content:center;
+    }
+    
+    .iklan img{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .gambar{
+        margin: 0 0;
+        margin-left: 0px;
+    }
+
+    .gambar img{
+        margin-left: 70px;
+    }
+    .gambar2{
+        margin: 0px; 
+    }
+    .gambar2 img{
+        margin-left: 70px;
+    }
+    
+    .jenis-gitar{
+        display: inline;
+
+    }
+    
+    .jenis-gitar p{
+        font-family: 'Baskervville';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        color: #FFFFFF;
+    }
+    
+    .jenis-gitar img{
+        margin-bottom: 30px;
+    }
+    .brand{
+        margin-left: 20px;
+        
+    }
+    
+    .brand p{
+        font-size: 13px;
+        line-height: 5px;
+    }
+    
+    .brand img{
+        margin-right: 10px;
+        width: 12%;
+    }
+
+
+    /* responsice footer */
+
+    .footer-container p {
+        font-size: 11px;
+    }
+}
+
+
+/* Ukuran Hp */
+@media screen and (max-width:360px){
+    /* responsive header */
+    .menu-toogle input{
+        top: 15px;
+    }
+    .logo h3{
+        font-size: 16px;
+    }
+
+    .logo img{
+        width: 40%;
+    }
+    
+    .menu-toogle span{
+        width: 25px;
+        height: 3px;
+
+        background-color: #f7890b;
+        border-radius: 1px;
+        transition: all 0.3s;
+    }
+    nav ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #dba66a;
+        align-items: center;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.sl{
+        transform: translateX(0);
+        opacity:1;
+    }
+
+    .header-container{
+        height: 70px;
+    }
+
+
+    /* responsive Body */
+    .body-container {
+        height: 2250px;
+    }
+    .iklan{
+        display: inline;
+        justify-content:center;
+    }
+    
+    .iklan img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .gambar{
+        margin: 0 0;
+        margin-left: 0px;
+    }
+
+    .gambar img{
+        margin-left: 0px;
+    }
+    .gambar2{
+        margin: 0px; 
+    }
+    .gambar2 img{
+        margin-left: 0px;
+    }
+    
+    .jenis-gitar{
+        display: inline;
+    }
+    
+    .jenis-gitar p{
+        font-family: 'Baskervville';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 40px;
+    
+        color: #FFFFFF;
+    }
+    
+    .jenis-gitar img{
+        margin-bottom: 30px;
+        width: 80%;
+    }
+    .brand{
+        margin-left: 20px;
+        
+    }
+    
+    .brand p{
+        font-size: 13px;
+        line-height: 1px;
+    }
+    
+    .brand img{
+        margin-right: 10px;
+        width: 12%;
+    }
+
+
+    /* responsice footer */
+
+    .footer-container p {
+        font-size: 6px;
+    }
+
+    .float{
+        margin-right: -20px ;
+    }
+    .float img{
+        width: 20%;
+    }
+}
+
